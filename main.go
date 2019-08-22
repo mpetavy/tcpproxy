@@ -40,6 +40,6 @@ func stop() error {
 func main() {
 	defer common.Cleanup()
 
-	common.New(&common.App{"tcpproxy", "1.0.0", "2018", "tcpproxy", "mpetavy", common.APACHE, "https://github.com/mpetavy/hl7send", true, nil,start, stop, nil, 0}, []string{"s", "d"})
+	common.New(&common.App{"tcpproxy", "1.0.0", "2018", "tcpproxy", "mpetavy", common.APACHE, "https://github.com/mpetavy/hl7send", true, start, stop, nil, 0}, []string{"s", "d"})
 	common.Run()
 }
