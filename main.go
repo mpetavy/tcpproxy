@@ -15,6 +15,8 @@ var (
 )
 
 func init() {
+	common.Init("tcpproxy", "1.0.0", "2018", "tcpproxy", "mpetavy", common.APACHE, "https://github.com/mpetavy/hl7send", true, start, stop, nil, 0)
+
 	source = flag.String("s", "", "server socket host address")
 	dest = flag.String("d", "", "destination socket host address")
 }
@@ -40,6 +42,5 @@ func stop() error {
 func main() {
 	defer common.Cleanup()
 
-	common.New(&common.App{"tcpproxy", "1.0.0", "2018", "tcpproxy", "mpetavy", common.APACHE, "https://github.com/mpetavy/hl7send", true, start, stop, nil, 0}, []string{"s", "d"})
-	common.Run()
+	common.Run([]string{"s", "d"})
 }
