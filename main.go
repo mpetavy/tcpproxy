@@ -40,7 +40,7 @@ func stop() error {
 }
 
 func main() {
-	defer common.Cleanup()
+	defer common.Done()
 
 	common.Run([]string{"s", "d"})
 }
