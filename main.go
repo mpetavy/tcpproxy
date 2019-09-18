@@ -15,7 +15,7 @@ var (
 )
 
 func init() {
-	common.Init("tcpproxy", "1.0.0", "2018", "tcpproxy", "mpetavy", common.APACHE, "https://github.com/mpetavy/hl7send", true, start, stop, nil, 0)
+	common.Init("1.0.0", "2018", "tcpproxy", "mpetavy", common.APACHE, true, start, stop, nil, 0)
 
 	source = flag.String("s", "", "server socket host address")
 	dest = flag.String("d", "", "destination socket host address")
