@@ -16,7 +16,7 @@ var (
 )
 
 func init() {
-	common.Init(false, "1.0.0", "", "2018", "tcpproxy", "mpetavy", fmt.Sprintf("https://github.com/mpetavy/%s", common.Title()), common.APACHE, nil, start, stop, nil, 0)
+	common.Init(false, "1.0.0", "", "", "2018", "tcpproxy", "mpetavy", fmt.Sprintf("https://github.com/mpetavy/%s", common.Title()), common.APACHE, nil, start, stop, nil, 0)
 
 	source = flag.String("s", "", "server socket host address")
 	dest = flag.String("d", "", "destination socket host address")
